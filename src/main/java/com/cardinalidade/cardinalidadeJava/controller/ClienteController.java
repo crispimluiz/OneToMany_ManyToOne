@@ -42,9 +42,8 @@ public class ClienteController {
         clienteService.deletar(codigo);
     }
 
-    @GetMapping (path = "/clientes/total")
-    public List<Cliente> findByClienteEndereco(){
-        return clienteService.getClienteEndereco();
+    @GetMapping(path = "clientes/total")
+    public List<Cliente> getCliente(){
+        return clienteService.getBuscaCliente();
     }
-
 }

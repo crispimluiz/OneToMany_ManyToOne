@@ -9,7 +9,6 @@ import java.util.List;
 
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
-   String consulta = "SELECT c.nomeCliente, e.lagradouro FROM clientes c" +
-           "JOIN enderecos e";
-   public List<Cliente> getClienteEndereco();
+   @Query("SELECT c FROM Cliente c")
+   List <Cliente> getCliente();
 }

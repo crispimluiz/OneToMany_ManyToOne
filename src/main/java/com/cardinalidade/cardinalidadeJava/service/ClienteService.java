@@ -43,8 +43,7 @@ public class ClienteService {
         clienteRepository.deleteById(codigo);
     }
 
-    public List<Cliente> getClienteEndereco (){
-        return clienteRepository.getClienteEndereco();
+    public List<Cliente> getBuscaCliente(){
+        return clienteRepository.getCliente();
     }
-
 }
