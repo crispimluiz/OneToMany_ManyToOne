@@ -25,14 +25,14 @@ public class EnderecoService {
 
     public Endereco cadastrar(Endereco endereco){
        endereco.getCodigo();
-       endereco.getLagadouro();
+       endereco.getLagradouro();
        endereco.getCliente();
         return enderecoRepository.save(endereco);
     }
 
     public Endereco alterar(Endereco endereco){
         endereco.getCodigo();
-        endereco.getLagadouro();
+        endereco.getLagradouro();
         endereco.getCliente();
 
         return enderecoRepository.save(endereco);

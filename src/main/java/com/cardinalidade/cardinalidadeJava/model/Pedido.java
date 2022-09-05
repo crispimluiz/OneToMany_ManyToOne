@@ -25,7 +25,7 @@ public class Pedido implements Serializable {
     private LocalDate dataPedido = LocalDate.now();
 
     @ManyToOne
-    @JoinColumn(name = "cliente_id")
+    @JoinColumn(name = "cliente_id",referencedColumnName = "codigo")
     private Cliente cliente;
 
     @JsonIgnore

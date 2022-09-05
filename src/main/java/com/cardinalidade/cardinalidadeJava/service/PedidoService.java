@@ -27,7 +27,6 @@ public class PedidoService {
 
     public Pedido cadastrar(Pedido pedido){
         pedido.getCodigo();
-        pedido.getCliente();
         pedido.getValorTotal();
         return pedidoRepository.save(pedido);
     }

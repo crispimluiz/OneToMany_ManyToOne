@@ -41,4 +41,10 @@ public class ClienteController {
     public void deletarCliente(@PathVariable Integer codigo){
         clienteService.deletar(codigo);
     }
+
+    @GetMapping (path = "/clientes/total")
+    public List<Cliente> findByClienteEndereco(){
+        return clienteService.getClienteEndereco();
+    }
+
 }

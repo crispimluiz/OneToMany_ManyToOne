@@ -42,4 +42,9 @@ public class ClienteService {
     public void deletar(Integer codigo){
         clienteRepository.deleteById(codigo);
     }
+
+    public List<Cliente> getClienteEndereco (){
+        return clienteRepository.getClienteEndereco();
+    }
+
 }
