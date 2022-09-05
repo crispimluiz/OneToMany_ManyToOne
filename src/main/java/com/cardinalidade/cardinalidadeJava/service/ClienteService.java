@@ -1,7 +1,6 @@
 package com.cardinalidade.cardinalidadeJava.service;
 
 import com.cardinalidade.cardinalidadeJava.model.Cliente;
-import com.cardinalidade.cardinalidadeJava.model.Endereco;
 import com.cardinalidade.cardinalidadeJava.repositories.ClienteRepository;
 import com.cardinalidade.cardinalidadeJava.repositories.EnderecoRepository;
 import org.springframework.beans.factory.annotation.Autowired;

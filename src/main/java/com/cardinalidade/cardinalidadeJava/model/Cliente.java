@@ -28,4 +28,8 @@ public class Cliente implements Serializable {
     @JsonIgnore //Para evitar a recursividade de buscas
     @OneToMany(mappedBy = "cliente", cascade=CascadeType.ALL)//Varios endereços um cliente
     private List<Endereco> enderecos;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "cliente", cascade=CascadeType.ALL)
+    private List<Pedido> pedidos = new ArrayList<>();
 }
