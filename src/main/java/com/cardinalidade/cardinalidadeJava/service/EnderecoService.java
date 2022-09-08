@@ -25,14 +25,14 @@ public class EnderecoService {
 
     public Endereco cadastrar(Endereco endereco){
        endereco.getCodigo();
-       endereco.getLagradouro();
+       endereco.getLogradouro();
        endereco.getCliente();
         return enderecoRepository.save(endereco);
     }
 
     public Endereco alterar(Endereco endereco){
         endereco.getCodigo();
-        endereco.getLagradouro();
+        endereco.getLogradouro();
         endereco.getCliente();
 
         return enderecoRepository.save(endereco);
@@ -40,5 +40,9 @@ public class EnderecoService {
 
     public void deletar(Integer codigo){
         enderecoRepository.deleteById(codigo);
+    }
+
+    public List<Endereco> getBuscaClienteEnderecos(){
+        return enderecoRepository.getClienteEnderecos();
     }
 }

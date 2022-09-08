@@ -1,11 +1,13 @@
 package com.cardinalidade.cardinalidadeJava.controller;
 
+import com.cardinalidade.cardinalidadeJava.model.ItemPedido;
 import com.cardinalidade.cardinalidadeJava.model.Pedido;
 import com.cardinalidade.cardinalidadeJava.service.PedidoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -39,4 +41,17 @@ public class PedidoController {
     public void deletarCliente(@PathVariable Integer codigo){
         pedidoService.deletar(codigo);
     }
+
+    @GetMapping(path = "mostrarUltimosPedidos")
+    public List<Pedido> getmostrarUltimosPedidos(){
+        return pedidoService.getmostrarUltimosPedidoss();
+    }
+
+    @GetMapping(path = "dataPedido")
+    public List<Pedido> dataPedido(){
+        return pedidoService.dataPedido();
+    }
+
+
+
 }

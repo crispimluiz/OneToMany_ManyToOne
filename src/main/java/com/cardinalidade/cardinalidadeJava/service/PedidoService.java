@@ -1,6 +1,7 @@
 package com.cardinalidade.cardinalidadeJava.service;
 
 import com.cardinalidade.cardinalidadeJava.model.Cliente;
+import com.cardinalidade.cardinalidadeJava.model.ItemPedido;
 import com.cardinalidade.cardinalidadeJava.model.Pedido;
 import com.cardinalidade.cardinalidadeJava.repositories.ClienteRepository;
 import com.cardinalidade.cardinalidadeJava.repositories.EnderecoRepository;
@@ -33,13 +34,23 @@ public class PedidoService {
 
     public Pedido alterar(Pedido pedido){
        pedido.getCodigo();
-       pedido.getCliente();
-       pedido.getDataPedido();
        pedido.getValorTotal();
+
         return pedidoRepository.save(pedido);
     }
 
     public void deletar(Integer codigo){
         pedidoRepository.deleteById(codigo);
     }
+
+    public List<Pedido>getmostrarUltimosPedidoss(){
+        return pedidoRepository.mostrarUltimosPedidos();
+    }
+
+    public List<Pedido>dataPedido(){
+        return pedidoRepository.dataPedido();
+    }
+
+
+
 }

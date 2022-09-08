@@ -41,4 +41,9 @@ public class EnderecoController {
     public void deletarEndereco(@PathVariable Integer codigo){
         enderecoService.deletar(codigo);
     }
+
+    @GetMapping(path = "clientes/enderecos")
+    public List<Endereco> getClienteEndereco(){
+        return enderecoService.getBuscaClienteEnderecos();
+    }
 }

@@ -22,7 +22,7 @@ public class Categoria implements Serializable {
 	private Long codigo;
 	private String nome;
 
-	@JsonIgnore
-	@OneToMany(mappedBy = "categoria", cascade=CascadeType.ALL)
-	private List<Produto> produtos = new ArrayList<>();
+//	@JsonIgnore
+//	@OneToMany(mappedBy = "categoria", cascade=CascadeType.ALL)
+//	private List<Produto> produtos = new ArrayList<>();
 }

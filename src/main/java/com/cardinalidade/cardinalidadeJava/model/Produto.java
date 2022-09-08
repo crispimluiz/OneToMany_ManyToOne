@@ -28,9 +28,9 @@ public class Produto implements Serializable {
 	private BigDecimal preco;
 	private LocalDate dataCadastro = LocalDate.now();
 	
-	@ManyToOne
-	@JoinColumn(name = "categoria_id")
-	private Categoria categoria;
+//	@ManyToOne
+//	@JoinColumn(name = "categoria_id")
+//	private Categoria categoria;
 
 	@JsonIgnore
 	@OneToMany(mappedBy = "produto", cascade=CascadeType.ALL)

@@ -6,6 +6,7 @@ import com.cardinalidade.cardinalidadeJava.repositories.EnderecoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -35,7 +36,6 @@ public class ClienteService {
     public Cliente alterar(Cliente cliente){
         cliente.getCodigo();
         cliente.getNomeCliente();
-
         return clienteRepository.save(cliente);
     }
 
@@ -44,6 +44,8 @@ public class ClienteService {
     }
 
     public List<Cliente> getBuscaCliente(){
-        return clienteRepository.getCliente();
+        return clienteRepository.getClientes();
     }
+
+
 }
